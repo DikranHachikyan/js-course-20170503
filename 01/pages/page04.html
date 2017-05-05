@@ -11,9 +11,13 @@
 
 	visitorName = window.prompt('Как се казвате?');
 
-	document.write('<h1>Здравей ');
-	document.write(visitorName);
-	document.write('!</h1>');	
+	//3. Какво е въвел посетителя?
+	if( visitorName === null ){ //Cancel
+	    visitorName = 'посетител';
+	}
+
+	//4. Извеждаме поздрав
+	document.write('<h1>Здравей ' + visitorName + '!</h1>');	
 	
 	
     
