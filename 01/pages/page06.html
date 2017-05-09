@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+	<script type="text/javascript">
+	//1.декларация на променлива
+	var visitorName = '';
+
+	//2. използваме
+
+	visitorName = window.prompt('Как се казвате?');
+
+	//3. Какво е въвел посетителя?
+	if( visitorName === null || visitorName === '' ){ //Cancel, Ок без текст
+	    visitorName = 'посетител';
+	}
+	else{ //visitor name + Ok
+		visitorName = '<em style="color:red">'+visitorName+'</em>';
+	}
+
+	//4. Извеждаме поздрав
+	document.write('<h1>Здравей ' + visitorName + '!</h1>');	
+	
+	
+    
+    
+	</script>
+</head>
+<body>
+	<h2>Включване на JS</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius, doloremque officia vero fugiat cum, dolores quas minima atque vitae obcaecati, sed placeat inventore. Commodi aut laudantium libero inventore veniam.</p>
+	<noscript>
+		Моля, разрешете изп%лнението на ... 
+	</noscript>
+</body>
+</html>

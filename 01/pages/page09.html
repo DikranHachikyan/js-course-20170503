@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+	<script type="text/javascript">
+	//1.декларация на функция
+
+	var msg;
+
+	function showMessage(message, style){
+		if( typeof message !== 'string' || message === ''){
+			message = 'Hello Show Message';
+			console.log('Empty Message');
+		}
+
+		if( typeof style !== 'string' || style === ''){
+			style = 'display:block';
+			console.log('Empty Style');
+		}
+		document.write('<div style="' + style+ '">' + message + '</div>');
+	}
+	
+	//2. извикване на функцията
+    showMessage('Hello JavaScript');
+    
+    showMessage('Проверете въведените данни', 'background-color:yellow');
+
+    showMessage( msg, 'color:green;font-weight:bold;font-size:20px');
+    
+	</script>
+</head>
+<body>
+	<h2>Включване на JS</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius, doloremque officia vero fugiat cum, dolores quas minima atque vitae obcaecati, sed placeat inventore. Commodi aut laudantium libero inventore veniam.</p>
+	<noscript>
+		Моля, разрешете изп%лнението на ... 
+	</noscript>
+</body>
+</html>
