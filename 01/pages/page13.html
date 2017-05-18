@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+
+</head>
+<body>
+	<h1>Lorem ipsum dolor sit amet</h1>
+	<h2>Commodi aut laudantium</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius, doloremque officia vero <a href="#" title="fugiat cum">fugiat cum</a>, dolores quas minima atque vitae obcaecati, sed placeat inventore. Commodi aut laudantium libero inventore veniam.
+	</p>
+	<div class="info"> Nam dignissimos et rem obcaecati, quod animi qui illum, cupiditate pariatur, ratione neque. Qui omnis, iste dolore excepturi. Deserunt magni provident, blanditiis.
+	</div>
+	<p>Consectetur <a href="#" >adipisicing</a> elit. Quo rerum autem itaque aliquam aut possimus nemo ea nihil distinctio excepturi, tempore, eius nobis voluptatum quaerat asperiores laboriosam amet minima impedit.
+	</p>
+	<p>Aperiam nobis iste sunt atque quam laudantium obcaecati eveniet, omnis repellat distinctio, saepe <a href="#" title="eaque quos">eaque quos</a> accusamus iusto expedita eum praesentium quas culpa dicta ex? Culpa corporis ea laboriosam inventore accusamus?
+	</p>
+	<p>Dicta laborum blanditiis voluptatem doloribus nisi atque obcaecati aperiam natus repudiandae quos. <a href="#" >Recusandae maxime</a> maiores ullam. Officiis possimus eligendi maxime molestiae, reprehenderit modi, quibusdam nostrum ipsa obcaecati, fugiat dolor ex.
+	</p>
+	
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('h2').css('color','red');
+    		$('p').css('background-color', '#ccc');
+    		$('div+p').css('font-size','20px');
+    		$('.info ~ p').css('border','1px solid red');
+
+    		$('[title]').css('background-color','yellow');
+    	});//on document ready
+	</script>	
+</body>
+</html>

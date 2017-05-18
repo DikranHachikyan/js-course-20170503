@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+</head>
+<body>
+	<button id="btn">Click Me!</button>
+	<hr>
+	<label><input type="checkbox" id="ckbx" >I agree with...</label>
+
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius, doloremque officia vero fugiat cum, dolores quas minima atque vitae obcaecati, sed placeat inventore. Commodi aut laudantium libero inventore veniam.</p>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('#btn').on('click', function(){
+    			window.alert('Click Event!');
+    		});//on btn click
+
+    		$('#ckbx')
+	    		  .click( function(){
+	    			window.alert('Click Event');	
+	    		  }) //on checkbox id=cb click
+	    		  .change(function(){
+	    			window.alert('Change Event');
+	    		  });//on checkbox id=cb change
+    	});//on document ready
+	</script>
+</body>
+</html>
