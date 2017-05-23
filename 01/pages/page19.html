@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+</head>
+<body>
+	
+    <h1 id="title">City Center</h1>
+	<img id="pic" data-small="../pics-small/pic1.jpg" src="../pics-large/pic1-320x240.jpg" alt="City Center">
+	<p id="info" data-language="en">Autem possimus velit quia sint reiciendis quaerat unde suscipit?
+	
+	</p>
+	<img id="sp" src="../pics-small/pic1.jpg" alt="">
+	<button id="btn">Show</button>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('#btn').click( function(){
+    			$('#title').html('Millennium Monument');
+    			$('#info').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
+    			$('#pic')
+    				     .attr('src','../pics-large/pic2-320x240.jpg')
+    			         .attr('alt','Millennium Monument');
+    			$('#pic').data('small','../pics-small/pic2.jpg')
+    			var smallImage = $('#pic').data('small');
+    			console.log('data:', smallImage);
+    			$('#info').data('language','bg');
+    			$('#sp').attr('src',smallImage);
+    			$('#pic').data('small','../pics-small/pic3.jpg')
+    		});
+    	});//on document ready
+	</script>
+</body>
+</html>

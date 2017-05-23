@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+	<style>
+#gallery li+li {
+    display: none;
+}
+
+#gallery {
+    list-style: none;
+}		
+	</style>
+</head>
+<body>
+	
+	<ul id="gallery">
+		<li><img src="../pics-large/pic1-320x240.jpg" alt=""></li>
+		<li><img src="../pics-large/pic2-320x240.jpg" alt=""></li>
+		<li><img src="../pics-large/pic3-320x240.jpg" alt=""></li>
+		<li><img src="../pics-large/pic4-320x240.jpg" alt=""></li>
+		<li><img src="../pics-large/pic5-320x240.jpg" alt=""></li>
+
+	</ul>
+
+	<button id="prv">Previous</button>
+	<button id="nxt">Next</button>
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('#nxt').click(function(){
+    			$('#gallery li:first-child').appendTo('#gallery');
+    		});
+
+    		$('#prv').click(function(){
+    			$('#gallery li:last-child').prependTo('#gallery');
+    		});
+    	});//on document ready
+	</script>
+</body>
+</html>
