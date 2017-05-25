@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+	<style>
+
+#gallery {
+    list-style: none;
+}
+
+#gallery li {
+    float: left;
+    margin-right: 16px;
+}
+h2 em{
+	color:#333;
+	font-size:12px;
+}		
+	</style>
+</head>
+<body>
+	<h1>Gallery</h1>
+	<div id="show">
+		<h2><span>City Center</span> <em>John Doe</em></h2>
+		<img src="../pics-large/pic1-320x240.jpg" alt="City Center">
+	</div>
+	<ul id="gallery">
+		<li><a href="#"><img src="../pics-small/pic1.jpg" data-author="John Doe" alt="City Center"></a></li>
+		<li><a href="#"><img src="../pics-small/pic2.jpg" data-author="Anna Smith" alt="Millennium Monument"></a></li>
+		<li><a href="#"><img src="../pics-small/pic3.jpg" data-author="Maria Anders" alt="Tourists Attractions"></a></li>
+		<li><a href="#"><img src="../pics-small/pic4.jpg" data-author="Ray King" alt="Avon River"></a></li>
+	</ul>
+	<div style="clear:both"></div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio nihil perferendis voluptate maiores dolorem, praesentium id voluptatum exercitationem deserunt, iste cum possimus tempore quidem non ducimus magnam, doloribus, necessitatibus.</p>
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('#gallery img').click(function(){
+    			var imageName = $(this).attr('src');
+    			var altProp = $(this).attr('alt');
+    			var author = $(this).data('author');
+
+    			imageName = imageName.replace('small', 'large');
+    			//imageName = imageName.replace('.jpg', '-320x240.jpg');
+    			var pos = imageName.lastIndexOf('.');
+    			imageName = imageName.slice(0,pos);
+    			$('#show').find('img').attr('src', imageName + '-320x240.jpg')
+    								  .attr('alt',altProp);
+
+    			$('#show').find('span').html(altProp)
+    			$('#show').find('em').html(author);
+    			//console.log('image:' + imageName + ' pos:' + pos + ' alt:' + altProp );
+    		});
+    	});//on document ready
+	</script>
+</body>
+</html>

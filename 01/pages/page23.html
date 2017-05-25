@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Page</title>
+	<style>
+
+#gallery {
+    list-style: none;
+}
+
+#gallery li {
+    float: left;
+    margin-right: 16px;
+}
+h2 em{
+	color:#333;
+	font-size:12px;
+}		
+	</style>
+</head>
+<body>
+	<h1>Frequently Asked Questions</h1>
+	<dl>
+		<dt><a href="#">Lorem ipsum dolor sit amet?</a></dt>
+		<dd>Consectetur adipisicing elit. Quibusdam corporis eum neque distinctio a cupiditate laboriosam vero quisquam sit, quidem repellat molestiae rerum dolor quae, atque enim consequatur voluptate animi.</dd>
+		<dt><a href="#">Et laudantium eum repellat culpa?</a></dt>
+		<dd>Debitis aut reprehenderit. Perspiciatis reprehenderit, accusantium repellat delectus aliquid enim magnam deserunt quis provident modi repellendus optio inventore deleniti reiciendis labore quidem eum nisi expedita.</dd>
+		<dt><a href="#">Culpa consectetur?</a></dt>
+		<dd>Neque ipsa nemo. Libero dicta quis enim sequi praesentium, quibusdam rerum, maxime velit explicabo cumque laborum, id, quidem debitis alias deleniti soluta neque hic at. Officia, repellat maxime!</dd>
+		<dt><a href="#">Repudiandae est eligendi at eius?</a></dt>
+		<dd>Adipisci quasi rem dignissimos enim expedita dolor repellat facilis iure eveniet delectus ab in quo, sint voluptatem eos. Quia temporibus voluptates ratione blanditiis. Error, nobis.</dd>
+		<dt><a href="#">Optio dolore error velit voluptatem beatae?</a></dt>
+		<dd>Magnam. Molestiae excepturi fugit voluptatibus ullam consectetur ut soluta quaerat ex cupiditate dolorem. Architecto commodi, amet nisi harum repudiandae esse aspernatur maiores distinctio eum.</dd>
+	</dl>
+	
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	-->
+	<script>
+    	$(document).ready(function(){
+    		$('dd').hide();
+    		$('dt').click(function(){
+    			$('dd').hide();
+    			$(this).next().fadeToggle();
+    		});
+    	});//on document ready
+	</script>
+</body>
+</html>
